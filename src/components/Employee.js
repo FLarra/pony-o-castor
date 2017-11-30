@@ -1,14 +1,22 @@
 import React from 'react'
 
 const Employee = ({ name, pony, onClick }) => (
-  <li
+  <div
+    className={`employee no-select ${pony ? 'pony-color' : 'castor-color'}`}
     onClick={onClick}
-    style={{
-      textDecoration: pony ? 'line-through' : 'none'
-    }}
-  >
-    {name}
-  </li>
+    >
+    <span
+      className='employee__name'
+      style={{ color: pony ? 'darkgoldenrod' : 'brown' }}
+    >
+      {name}
+    </span>
+    <div
+      className='employee__icon'
+    >
+      <img src={pony ? 'pony.gif' : 'castor.gif'} alt=''></img>
+    </div>
+  </div>
 )
 
 export default Employee

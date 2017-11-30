@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { ponifyEmployee } from '../actions'
 
 const Employees = ({ employees, onEmployeeClick }) => (
-  <ul>
+  <div>
     {employees.map(employee =>
       <Employee
         key={employee.name}
@@ -12,7 +12,7 @@ const Employees = ({ employees, onEmployeeClick }) => (
         onClick={ () => onEmployeeClick(employee.name) }
       />
     )}
-  </ul>
+  </div>
 )
 
 const mapStateToProps = (state) => (

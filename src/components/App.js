@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import AddEmployee from './AddEmployee';
 import Employees from './Employees';
 import './App.css';
+import './AddEmployee.css';
+import './Employee.css';
 
 class App extends Component {
   render() {
