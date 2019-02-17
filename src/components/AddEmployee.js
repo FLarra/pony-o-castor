@@ -1,6 +1,8 @@
 import React from 'react'
+import { connect } from 'react-redux'
+import { addEmployee } from '../actions'
 
-let AddEmployee = () => {
+let AddEmployee = ({ dispatch }) => {
   let input
 
   return (
@@ -10,6 +12,7 @@ let AddEmployee = () => {
         if (!input.value.trim()) {
           return
         }
+        dispatch(addEmployee(input.value))
         input.value = ''
       }}>
         <h1>Please add your name</h1>
@@ -25,4 +28,4 @@ let AddEmployee = () => {
   )
 }
 
-export default AddEmployee
+export default connect()(AddEmployee)
