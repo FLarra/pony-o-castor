@@ -1,21 +1,10 @@
-const addEmployee = (state = [], action) => {
-  switch (action.type) {
-    case 'ADD_EMPLOYEE':
-      return [
-        ...state,
-        {
-          name: action.name,
-          pony: true
-        }
-      ];
-    case 'PONIFY_EMPLOYEE':
-      return state.map(employee =>
-        (employee.name === action.name) ? {...employee, pony: !employee.pony} : employee
-      )
+import { combineReducers } from 'redux'
+import employees from './employees'
+import visibilityFilter from './visibilityFilter'
 
-    default:
-      return state;
-  }
-}
+const employeesApp = combineReducers({
+  employees,
+  visibilityFilter
+})
 
-export default addEmployee
+export default employeesApp

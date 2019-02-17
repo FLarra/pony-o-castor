@@ -18,7 +18,7 @@ const Employees = ({ employees, onEmployeeClick }) => (
 )
 
 const mapStateToProps = (state) => (
-  { employees: state }
+  { employees: state.employees }
 )
 
 const mapDispatchToProp = {
