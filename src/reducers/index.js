@@ -1,14 +1,17 @@
 const addEmployee = (state = [], action) => {
   switch (action.type) {
     case 'ADD_EMPLOYEE':
-      return [
+      let newState = [
         ...state,
         {
-          name: action.name,
-          pony: true
+          name: action.name
         }
-      ];
+      ]
+      console.log(newState);
+
+      return newState;
     default:
+      console.log(state);
       return state;
   }
 }
