@@ -181,7 +181,7 @@ form .question input[type="text"]:valid ~ label {
   margin-right: 10px;
 }
 
-.employee__icon img {
+.employee__icon {
   width: 80px;
   height: 70px;
   border-radius: 100px;
@@ -194,6 +194,28 @@ form .question input[type="text"]:valid ~ label {
   margin-top: 28px;
   margin-left: 30px;
   font-size: 24px;
+}
+
+.employee.pony-color .employee__name {
+  color: darkgoldenrod;
+}
+
+.employee.castor-color .employee__name {
+  color: brown;
+}
+
+.employee.pony-color .employee__icon {
+  background: url('images/pony.gif');
+  background-size: 137px;
+  background-position-x: -18px;
+  background-position-y: -10px;
+}
+
+.employee.castor-color .employee__icon {
+  background: url('images/castor.gif');
+  background-size: 137px;
+  background-position-x: -24px;
+  background-position-y: -10px;
 }
 
 .no-select {
