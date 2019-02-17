@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import AddEmployee from './components/AddEmployee';
+import Employees from './components/Employees';
 
 class App extends Component {
   render() {
@@ -12,6 +13,7 @@ class App extends Component {
           <h1 className="App-title">Welcome to Pony o Castor!</h1>
         </header>
         <AddEmployee />
+        <Employees />
       </div>
     );
   }
